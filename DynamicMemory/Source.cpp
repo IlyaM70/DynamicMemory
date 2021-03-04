@@ -7,8 +7,8 @@ void Clear(int** arr, int m, int n);
 void FillRand(int arr[], const int n);
 void FillRand(int** arr, const int m,const int n);
 
-void Print(int arr[], const int n);
-void Print(int** arr, const int m, const int n);
+template<typename T>void Print(T arr[], const T n);
+template<typename T>void Print(T** arr, const T m, const T n);
 
 int* push_back(int arr[],  int& n, int value);
 int* push_front(int arr[], int& n, int value);
@@ -124,7 +124,7 @@ void FillRand(int arr[], const int n)
 	}
 
 
-void Print(int arr[], const int n)
+template<typename T>void Print(T arr[], const T n)
 {
 	for (int i = 0; i < n; i++)
 		
@@ -133,7 +133,7 @@ void Print(int arr[], const int n)
 	}
 	cout << endl;
 }
-void Print(int** arr, const int m, const int n)
+template<typename T>void Print(T** arr, const T m, const T n)
 {
 	for (int i = 0; i < m; i++)
 {
