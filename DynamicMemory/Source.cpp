@@ -2,7 +2,7 @@
 using namespace std;
 int** Allocate(int m, int n);
 
-void Clear(int** arr, int m, int n);
+template<typename T>void Clear(T** arr, int m, int n);
 
 void FillRand(int arr[], const int n);
 void FillRand(int** arr, const int m,const int n);
@@ -229,7 +229,7 @@ int* erase(int arr[], int& n, int index)
 	return arr;
 }
 
-void Clear(int** arr, int m, int n)
+template<typename T>void Clear(T** arr, int m, int n)
 {
 	//удаление
 //строк
